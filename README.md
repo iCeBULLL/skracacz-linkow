@@ -1,1 +1,2 @@
 # skracacz-linkow
+# skracacz-linkow
