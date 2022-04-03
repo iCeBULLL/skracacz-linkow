@@ -17,6 +17,8 @@ class LinkManageController {
     LinkDto createLink(@RequestBody CreateLinkDto link) {
         return link.toDto();
     }
-//    @DeleteMapping("/{id}","/")
-//    ResponseEntity<?>
+    @DeleteMapping("/{id}/{email}")
+    ResponseEntity<?>deleteLink(String id,String email){
+        throw new RuntimeException("Zepsute");
+    }
 }
