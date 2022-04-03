@@ -1,4 +1,4 @@
-package dev.greencashew.linkshortener.controller;
+package dev.iCeBULLL.linkshortener.link;
 
 
 

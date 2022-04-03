@@ -1,4 +1,4 @@
-package dev.greencashew.linkshortener;
+package dev.iCeBULLL.linkshortener;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
