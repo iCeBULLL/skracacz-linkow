@@ -3,6 +3,7 @@ package dev.greencashew.linkshortener.controller;
 
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 
@@ -16,4 +17,6 @@ class LinkManageController {
     LinkDto createLink(@RequestBody CreateLinkDto link) {
         return link.toDto();
     }
+//    @DeleteMapping("/{id}","/")
+//    ResponseEntity<?>
 }
