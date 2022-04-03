@@ -26,10 +26,10 @@ class RedirectController {
     @GetMapping("/{id}")
     ResponseEntity<?> redirectLink(
             @PathVariable String id, HttpServletResponse httpServletResponse)
-        throws IOException{
+            throws IOException {
 
-        final LinkDto dto= service.getLink(id);
-        if(dto != null){
+        final LinkDto dto = service.getLink(id);
+        if (dto != null) {
             httpServletResponse.sendRedirect(dto.targetUrl());
             return ResponseEntity.ok().build();
         } else {

@@ -1,7 +1,6 @@
 package dev.iCeBULLL.linkshortener.controller;
 
 
-
 import dev.iCeBULLL.linkshortener.link.LinkAlreadyExistsException;
 import dev.iCeBULLL.linkshortener.link.LinkDto;
 import dev.iCeBULLL.linkshortener.link.LinkService;
@@ -20,7 +19,7 @@ class LinkManageController {
     private final LinkService service;
 
     @Autowired
-    LinkManageController(LinkService service){
+    LinkManageController(LinkService service) {
         this.service = service;
     }
 
@@ -33,13 +32,14 @@ class LinkManageController {
             return ResponseEntity.
                     created(URI.create(linkDto.getShortenedLink())).
                     body(service.createLink(linkDto));
-        }catch (LinkAlreadyExistsException e){
+        } catch (LinkAlreadyExistsException e) {
             return ResponseEntity.status(HttpStatus.CONFLICT).
                     body(new ExceptionResponse(e.getMessage()));
         }
     }
+
     @DeleteMapping("/{id}/{email}")
-    ResponseEntity<?>deleteLink(String id,String email){
+    ResponseEntity<?> deleteLink(String id, String email) {
         throw new RuntimeException("Zepsute");
     }
 }

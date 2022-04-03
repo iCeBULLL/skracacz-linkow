@@ -1,7 +1,6 @@
 package dev.iCeBULLL.linkshortener.link;
 
 
-
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
@@ -14,7 +13,7 @@ public record LinkDto(
         LocalDate expirationDate,
         int visits
 ) {
-    public String getShortenedLink(){
+    public String getShortenedLink() {
         return ServletUriComponentsBuilder.fromCurrentContextPath()
                 .path("/s/{id}")
                 .buildAndExpand(id)

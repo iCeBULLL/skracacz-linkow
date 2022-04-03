@@ -20,6 +20,7 @@ class LinkServiceImpl implements LinkService {
             return dto;
         }
     }
+
     @Override
     public LinkDto getLink(String id) {
         return repository.get(id);
